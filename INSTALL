@@ -1,0 +1,10 @@
+In order to build the programs you'll need the following development tools,
+libraries and headers for these libraries. The version between parenthesis is
+the minimum version actively tested (if differs from the minimum listed
+version). The minimum version listed is still the expected minium required
+version, but no guarantees.
+
+	cmake >= 2.8.0 (2.8.2)
+	g++ (4.4.5) *
+
+*) Other compilers should work as well, but have not been tested.
