@@ -186,4 +186,5 @@ endif(NOT "${CMAKE_CXX_FLAGS}" STREQUAL "${COMPILER_FLAGS}")
 
 ##### Subdirectories #####
 
+add_subdirectory(doc)
 add_subdirectory(src)
