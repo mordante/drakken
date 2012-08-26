@@ -2,6 +2,11 @@
 
 include_directories(${CMAKE_SOURCE_DIR}/src/)
 
+include_directories(${GLOG_INCLUDEDIR})
+
+link_directories(${GLOG_LIBDIR})
+
+
 ########## Libraries. ##########
 
 ##### Exception. #####

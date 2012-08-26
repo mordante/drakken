@@ -6,6 +6,7 @@ version, but no guarantees.
 
 	cmake >= 2.8.0 (2.8.2)
 	g++ (4.4.5) *
+	google-glog (0.3.0)
 	doxygen >= 1.7.1 **
 
 *) Other compilers should work as well, but have not been tested.

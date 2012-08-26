@@ -14,6 +14,28 @@ option(ENABLE_PEDANTIC_COMPILATION "Sets the pedantic compilation mode" ON)
 
 ##### Dependencies #####
 
+find_package(PkgConfig REQUIRED)
+pkg_check_modules(GLOG REQUIRED libglog)
+
+# This test tests for some local modifications to the glog library.
+# These changes are not deemed finished enough to send upstream.
+file(WRITE
+	"${CMAKE_BINARY_DIR}/glog_test/glog_test.cpp"
+	"#include <glog/logging.h>\nint main(){FLAGS_log_prefix_format = \"\";}"
+)
+try_compile(GLOG_HAS_LOG_PREFIX_FORMAT
+	"${CMAKE_BINARY_DIR}/glog_test"
+	"${CMAKE_BINARY_DIR}/glog_test/glog_test.cpp"
+	CMAKE_FLAGS
+		-DINCLUDE_DIRECTORIES=${GLOG_INCLUDEDIR}
+		-DLINK_DIRECTORIES=${GLOG_LIBDIR}
+		-DLINK_LIBRARIES=${GLOG_LIBRARIES}
+)
+
+if(GLOG_HAS_LOG_PREFIX_FORMAT)
+	add_definitions(-DGLOG_HAS_LOG_PREFIX_FORMAT)
+endif(GLOG_HAS_LOG_PREFIX_FORMAT)
+
 
 ##### Set the compiler flags.
 
