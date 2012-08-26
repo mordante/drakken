@@ -21,3 +21,11 @@ add_library(exception
 
 
 ########## Programs. ##########
+
+add_executable(drakken
+	drakken/drakken.cpp
+)
+
+target_link_libraries(drakken
+	${GLOG_LIBRARIES}
+)
