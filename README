@@ -1,0 +1,10 @@
+drakken
+=======
+
+This project offers an script language intended to be embedded in C++
+programs. The program is in its early development stage.
+
+All programs and libraries are licenced under the GPL v2.0. The licence can
+be found in COPYING. The licence will get an exception to allow using the
+library in proprietary projects, but will take some time to find the proper
+exception.
