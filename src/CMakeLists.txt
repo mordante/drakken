@@ -2,6 +2,7 @@
 
 include_directories(${CMAKE_SOURCE_DIR}/src/)
 
+include_directories(${Boost_INCLUDE_DIR})
 include_directories(${GLOG_INCLUDEDIR})
 
 link_directories(${GLOG_LIBDIR})

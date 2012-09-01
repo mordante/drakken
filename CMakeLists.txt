@@ -14,6 +14,8 @@ option(ENABLE_PEDANTIC_COMPILATION "Sets the pedantic compilation mode" ON)
 
 ##### Dependencies #####
 
+find_package(Boost REQUIRED)
+
 find_package(PkgConfig REQUIRED)
 pkg_check_modules(GLOG REQUIRED libglog)
 
