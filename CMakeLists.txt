@@ -14,6 +14,9 @@ option(ENABLE_PEDANTIC_COMPILATION "Sets the pedantic compilation mode" ON)
 
 ##### Dependencies #####
 
+find_package(BISON REQUIRED)
+find_package(FLEX REQUIRED)
+
 find_package(Boost REQUIRED)
 
 find_package(PkgConfig REQUIRED)

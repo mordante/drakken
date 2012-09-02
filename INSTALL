@@ -7,6 +7,8 @@ version, but no guarantees.
 	cmake >= 2.8.0 (2.8.2)
 	g++ (4.4.5) *
 	boost (1.42)
+	bison (2.4.1)
+	flex (2.5.35)
 	google-glog (0.3.0)
 	doxygen >= 1.7.1 **
 
