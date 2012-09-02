@@ -37,6 +37,11 @@ tpre_condition::tpre_condition(const std::string& message)
 {
 }
 
+tassertion::tassertion(const std::string& message)
+	: texception(message)
+{
+}
+
 tpost_condition::tpost_condition(const std::string& message)
 	: texception(message)
 {

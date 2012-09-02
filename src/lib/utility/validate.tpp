@@ -89,4 +89,34 @@
 		}                                                                    \
 	} while(0)
 
+/**
+ * Validates whether the assertion @p condition is true.
+ *
+ * This function is intended to replace @c std::assert(condition).
+ *
+ *                                @c std::string as single parameter.
+ * @pre                           @p condition can be evaluated as a boolean
+ *                                expression.
+ *
+ * @param condition               The condition to validate. It the condition
+ *                                evaluates to @c true, nothing happens, if it
+ *                                evaluates to @c false an exception of the
+ *                                type @ref lib::tassertion is thrown.
+ */
+#define ASSERTION(condition)                                                 \
+	do {                                                                     \
+		if(!(condition)) {                                                   \
+			throw ::lib::tassertion(::lib::concatenate(                      \
+					  "Conditional failure in function '"                    \
+					, __PRETTY_FUNCTION__                                    \
+					, "' file '"                                             \
+					, __FILE__                                               \
+					, "' line '"                                             \
+					, __LINE__                                               \
+					, "' condition '"                                        \
+					, #condition                                             \
+					, "'"));                                                 \
+		}                                                                    \
+	} while(0)
+
 #endif

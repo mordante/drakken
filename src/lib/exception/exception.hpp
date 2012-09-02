@@ -59,6 +59,13 @@ struct tpre_condition
 	tpre_condition(const std::string& message);
 };
 
+/** Thrown when an assertion is violated. */
+struct tassertion
+	: public texception
+{
+	tassertion(const std::string& message);
+};
+
 /** Thrown when a post-condition is violated. */
 struct tpost_condition
 	: public texception
